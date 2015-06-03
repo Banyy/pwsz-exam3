@@ -1,30 +1,22 @@
-describe('Donkey', function ()
-{
+describe('Donkey', function () {
     var donkey;
-    beforeEach(function ()
-    {
+    beforeEach(function () {
         donkey = new Donkey();
     });
-    describe('when donkey gets hungry', function ()
-    {
-        beforeEach(function ()
-        {
+    describe('when donkey gets hungry', function () {
+        beforeEach(function () {
             donkey.makeHungry();
         });
-        it('should ask for banana', function ()
-        {
+        it('should ask for banana', function () {
             expect(donkey.makeSound()).toEqual('banana');
         });
-        describe('and when donkey gets banana', function ()
-        {
-            beforeEach(function ()
-            {
-                donkey.giveHay();
-            });
-            it('should go crazy again', function ()
-            {
-                expect(donkey.makeSound()).toBeUndefined();
-            });
+    describe('and when donkey gets banana', function () {
+        beforeEach(function () {
+            donkey.giveHay();
         });
+        it('should go crazy again', function () {
+            expect(donkey.makeSound()).toBeUndefined();
+        });
+    });
     });
 });
